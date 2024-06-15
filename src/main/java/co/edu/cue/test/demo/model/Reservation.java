@@ -29,18 +29,5 @@ public class Reservation {
 
     private LocalDate initialDate;
     private LocalDate finalDate;
-    @OneToMany(mappedBy = "reservation")
-    private List<Reservation>reservations;
 
-    @Override
-    public String toString() {
-        return "Reservation{" +
-                "id=" + id +
-                ", user=" + user +
-                ", vehicle=" + vehicle +
-                ", initialDate=" + initialDate +
-                ", finalDate=" + finalDate +
-                ", reservations=" + reservations +
-                '}';
-    }
 }

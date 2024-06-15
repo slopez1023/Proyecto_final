@@ -18,15 +18,9 @@ import java.util.stream.Collectors;
  * Implementación del servicio para gestionar vehículos.
  */
 @Service
-@Validated
 public class VehicleServiceImpl implements VehicleService {
 
-    private final VehicleRepository vehicleRepository;
-
-    @Autowired
-    public VehicleServiceImpl(VehicleRepository vehicleRepository) {
-        this.vehicleRepository = vehicleRepository;
-    }
+    private VehicleRepository vehicleRepository;
 
     /**
      * Crea un nuevo vehículo.

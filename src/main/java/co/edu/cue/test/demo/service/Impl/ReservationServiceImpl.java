@@ -18,15 +18,9 @@ import java.util.stream.Collectors;
  * Implementación del servicio para gestionar reservaciones.
  */
 @Service
-@Validated
 public class ReservationServiceImpl implements ReservationService {
 
-    private final ReservationRepository reservationRepository;
-
-    @Autowired
-    public ReservationServiceImpl(ReservationRepository reservationRepository) {
-        this.reservationRepository = reservationRepository;
-    }
+    private  ReservationRepository reservationRepository;
 
     /**
      * Crea una nueva reservación.

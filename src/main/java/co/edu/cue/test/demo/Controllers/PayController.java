@@ -16,7 +16,7 @@ public class PayController {
     @Autowired
     private PayService payService;
 
-    @PostMapping
+    @PostMapping("/createPay")
     public ResponseEntity<PayDto> createPayment(@RequestBody PayDto payDto) {
         PayDto createdPayment = payService.createPayment(payDto);
         return ResponseEntity.ok(createdPayment);
@@ -54,5 +54,4 @@ public class PayController {
         }
         return ResponseEntity.noContent().build();
     }
-
 }

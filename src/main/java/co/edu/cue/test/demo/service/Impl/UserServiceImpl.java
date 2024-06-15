@@ -18,15 +18,11 @@ import java.util.stream.Collectors;
  * Implementación del servicio para gestionar usuarios.
  */
 @Service
-@Validated
 public class UserServiceImpl implements UserService {
 
-    private final UserRepository userRepository;
+    private  UserRepository userRepository;
 
-    @Autowired
-    public UserServiceImpl(UserRepository userRepository) {
-        this.userRepository = userRepository;
-    }
+
 
     /**
      * Crea un nuevo usuario.

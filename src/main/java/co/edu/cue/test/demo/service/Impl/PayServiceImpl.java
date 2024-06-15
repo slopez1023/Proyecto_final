@@ -5,6 +5,7 @@ import co.edu.cue.test.demo.mapping.dtos.PayDto;
 import co.edu.cue.test.demo.model.Pay;
 import co.edu.cue.test.demo.service.PayService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.annotation.Validated;
 
@@ -17,15 +18,10 @@ import java.util.stream.Collectors;
  * Implementación del servicio para gestionar pagos.
  */
 @Service
-@Validated
 public class PayServiceImpl implements PayService {
 
-    private final PayRepository payRepository;
+    private PayRepository payRepository;
 
-    @Autowired
-    public PayServiceImpl(PayRepository payRepository) {
-        this.payRepository = payRepository;
-    }
 
     /**
      * Crea un nuevo pago.

@@ -9,7 +9,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Table(name = "vehiculos")
+@Table(name = "vehicle")
 public class Vehicle {
 
     @Id
@@ -19,6 +19,5 @@ public class Vehicle {
     private String category;
     private double price;
     private boolean available;
-
 
 }

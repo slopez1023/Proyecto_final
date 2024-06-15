@@ -12,7 +12,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Table(name = "reservaciones")
+@Table(name = "reservation")
 public class Reservation {
 
     @Id
@@ -29,7 +29,7 @@ public class Reservation {
 
     private LocalDate initialDate;
     private LocalDate finalDate;
-    @OneToMany(mappedBy = "reservacion")
+    @OneToMany(mappedBy = "reservation")
     private List<Reservation>reservations;
 
     @Override

@@ -39,15 +39,15 @@ class UserServiceImplTest {
     void setUp() {
         user = new User();
         user.setId(1L);
-        user.setName("John Doe");
-        user.setPassword("password");
-        user.setEmail("john.doe@example.com");
+        user.setName("Santiago");
+        user.setPassword("S4nt14g0");
+        user.setEmail("santilopez@gmail.com");
 
         userDto = new UserDto(
                 1L,
-                "John Doe",
-                "password",
-                "john.doe@example.com"
+                "Santiago",
+                "S4nt14g0",
+                "santilopez@gmail.com"
         );
     }
 
@@ -112,7 +112,7 @@ class UserServiceImplTest {
     @Test
     void loginTest() {
         when(userRepository.findAll()).thenReturn(Arrays.asList(user));
-        UserDto loginUserDto = userService.login("john.doe@example.com", "password");
+        UserDto loginUserDto = userService.login("santilopez@gmail.comm", "S4nt14g0");
         assertNotNull(loginUserDto);
         assertEquals(userDto.email(), loginUserDto.email());
     }
@@ -120,7 +120,7 @@ class UserServiceImplTest {
     @Test
     void loginInvalidCredentialsTest() {
         when(userRepository.findAll()).thenReturn(Arrays.asList(user));
-        UserDto loginUserDto = userService.login("john.doe@example.com", "wrongpassword");
+        UserDto loginUserDto = userService.login("santilopez@gmail.com", "wrongpassword");
         assertNull(loginUserDto);
     }
 }
